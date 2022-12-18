@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/jpg" href="./img/CILKGax.jpg" />
+        <!-- 1. Tiêu đề của web -->
+        <title>Happy Birthday Hằng</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <script>
+            window.open = function () {};
+            window.print = function () {};
+            //Support hover state for mobile
+            if (false) {
+                window.ontouchstart = function () {};
+            }
+        </script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </head>
+    <body class="page__main">
+        <div class="buttons">
+            <!-- 1. Phần nhạc chúc mừng sinh nhật -->
+            <audio id="player" autoplay loop>
+                <source src="./Âm nhạc/Happy Birthday.mp3" type="audio/mp3" />
+            </audio>
+            <!-- 2.Chữ ở menu có thể sửa lại theo ý của mình-->
+            <a href="index.html" class="btn btn-bir">Sinh nhật</a>
+            <a href="gallery.html" class="btn btn-gallery">Ảnh kỉ niệm</a>
+        </div>
+        <div class="avatar">
+            <!-- 3. Phần ảnh để chúc Phan Thị Thu Hằng -->
+            <img src="./Pic/MyAvatar.jpg" alt="" class="avatar__img" onload="showMessage()" />
+            <img src="./Pic/MyAvatar.jpg" alt="" class="avatar__img" onclick="showMessage()" />
+        </div>
+        <script>
+            if (document.location.search.match(/type=embed/gi)) {
+                window.parent.postMessage("resize", "*");
+            }
+            function showMessage() {
+                //4. Lời nhắn hiện ra khi bấm vào avatar
+                swal({
+                    title: "🎂Lời chúc🎂", // Tiêu đề của popup
+                    text: "Chúc mừng sinh nhật Hằng", // Nội dung lời nhắn
+                    button: {
+                        text: "Cảm ơn nhiều",
+                    },
+                });
+            }
+        </script>
+    </audio>
+        <audio id="player" autoplay loop>
+            <source src="./music/music.mp3" type="audio/mp3" />
+        </audio>    
+    </body>
+</html>
